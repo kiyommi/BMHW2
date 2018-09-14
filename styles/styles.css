@@ -1,0 +1,17 @@
+div[resizable] {
+    border: thick solid Black;
+    width: 50vw;
+    height:50vh;
+    position: relative;
+}
+
+.enter {
+    cursor: move;
+}
+
+.ui-icon-gripsmall-diagonal-se{
+    cursor: se-resize;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

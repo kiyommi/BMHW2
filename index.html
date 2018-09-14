@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>BuyMe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="node_modules/jquery-ui-dist/jquery-ui.theme.min.css">
+	<script src="node_modules/jquery-ui-dist/external/jquery/jquery.js"></script>
+    <script src="node_modules/jquery-ui-dist/jquery-ui.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/appController.js"></script>
+</head>
+<body ng-app="buyMeApp" ng-controller="appCtrl as root" > 
+    <div style="height: 100vh; width: 100vw" id="mainDrag">
+        <div class="chart-container" style="width: 50vw" resizable>
+            <canvas id="line" class="chart chart-line" chart-data="root.rates"
+            chart-labels="root.labels" chart-series="root.series" chart-options="root.options"
+            chart-dataset-override="datasetOverride" chart-click="onClick">
+            </canvas>
+        </div> 
+    </div>    
+</body>
+</html>
